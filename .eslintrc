@@ -1,40 +1,15 @@
 {
-  // "extends": ["eslint:recommended", "airbnb", "prettier"],
-  "plugins": ["jsx-a11y", "react-hooks", "@babel/", "flowtype", "import"],
+  "extends": ["eslint:recommended", "airbnb", "prettier"],
+  "plugins": ["react-hooks"],
   "env": {
-    "browser": true,
-    "es2021": true
+    "browser": true
   },
   "parser": "@babel/eslint-parser",
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  // "env": {
-  //   "browser": true,
-  //   "es2021": true
-  // },
-  "extends": [
-    "plugin:react/recommended",
-    "standard",
-    "plugin:react/jsx-runtime",
-    "plugin:testing-library/react",
-    "plugin:jest/all",
-    "eslint:recommended",
-    "airbnb",
-    "prettier"
-  ],
   "parserOptions": {
-    "sourceType": "module",
-    "allowImportExportEveryWhere": false,
-    "ecmaFeatures": {
-      "globalReturn": false,
-      "jsx": true
-    },
-    "ecmaVersion": 2020,
+    "ecmaVersion": 8,
+    "requireConfigFile": false,
     "babelOptions": {
-      "configFile": "./babel.config.js"
+      "presets": ["@babel/preset-react"]
     }
   },
   "rules": {
@@ -48,6 +23,8 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "arrow-body-style": [0],
-    "prefer-arrow-callback": [0]
+    "prefer-arrow-callback": [0],
+    "react/function-component-definition": "off",
+    "no-console": "off"
   }
 }
