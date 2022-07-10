@@ -36,7 +36,7 @@ const Home = () => {
   const onRadioChange = ev => {
     setSearchOption(ev.target.value);
   };
-  console.log(searchOption);
+  // console.log(searchOption);
 
   // ! ----------------------- Conditional React --> Render Results --------------------------------
 
